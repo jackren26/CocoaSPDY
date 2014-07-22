@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   pod_name  = "SPDY"
   name       = "Cocoa#{pod_name}"
-  url            = "https://github.com/twitter/#{name}"
+  url            = "https://github.com/jackren26/#{name}"
   git_url        = "#{url}.git"
   version        = "1.0.2"
   source_files   = "#{pod_name}/**/*.{h,m}"

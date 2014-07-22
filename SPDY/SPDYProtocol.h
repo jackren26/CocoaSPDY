@@ -11,6 +11,11 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const SPDYStreamErrorDomain;
+extern NSString *const SPDYSessionErrorDomain;
+extern NSString *const SPDYCodecErrorDomain;
+extern NSString *const SPDYSocketErrorDomain;
+extern NSString *const SPDYSocketErrorDomainNotification;
 extern NSString *const SPDYOriginRegisteredNotification;
 extern NSString *const SPDYOriginUnregisteredNotification;
 

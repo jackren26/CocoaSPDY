@@ -25,6 +25,7 @@ NSString *const SPDYStreamErrorDomain = @"SPDYStreamErrorDomain";
 NSString *const SPDYSessionErrorDomain = @"SPDYSessionErrorDomain";
 NSString *const SPDYCodecErrorDomain = @"SPDYCodecErrorDomain";
 NSString *const SPDYSocketErrorDomain = @"SPDYSocketErrorDomain";
+NSString *const SPDYSocketErrorDomainNotification = @"SPDYSocketErrorDomainNotification";
 NSString *const SPDYOriginRegisteredNotification = @"SPDYOriginRegisteredNotification";
 NSString *const SPDYOriginUnregisteredNotification = @"SPDYOriginUnregisteredNotification";
 
