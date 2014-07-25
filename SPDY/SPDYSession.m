@@ -341,9 +341,12 @@
     _lastSocketActivity = CFAbsoluteTimeGetCurrent();
     SPDY_WARNING(@"session connection error: %@", error);
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:SPDYSocketErrorDomainNotification
-                                                        object:nil
-                                                      userInfo:@{@"error": error, @"host": _origin.host}];
+    if (![error.domain isEqualToString:SPDYSocketErrorDomain] ||
+        (error.code != SPDYSocketConnectTimeout && error.code != SPDYSocketTransportError)) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:SPDYSocketErrorDomainNotification
+                                                            object:nil
+                                                          userInfo:@{@"error": error, @"host": _origin.host}];
+    }
 
     for (SPDYStream *stream in _activeStreams) {
         [stream closeWithError:error];
