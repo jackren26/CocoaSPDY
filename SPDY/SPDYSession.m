@@ -348,7 +348,9 @@
                                                           userInfo:@{@"error": error, @"host": _origin.host}];
     }
 
-    for (SPDYStream *stream in _activeStreams) {
+    NSMutableArray *tempAry = [NSMutableArray array];
+    [tempAry addObjectsFromArray:_activeStreams];
+    for (SPDYStream *stream in tempAry) {
         [stream closeWithError:error];
     }
     [_activeStreams removeAllStreams];
